@@ -1,0 +1,12 @@
+import { StatisticsRepository, StatisticsOrderBy } from '../repositories/statisticsRepository';
+import { AggregatedStatistics } from '../models/aggregatedStatistics';
+
+export declare class StatisticsService {
+  private statisticsRepository: StatisticsRepository;
+
+  constructor(statisticsRepository: StatisticsRepository);
+
+  getStatisticsByAutoId(autoId: string): Promise<AggregatedStatistics | null>;
+  getAllStatistics(limit?: number, offset?: number): Promise<AggregatedStatistics[]>;
+  getTopStatistics(limit?: number, orderBy?: StatisticsOrderBy): Promise<AggregatedStatistics[]>;
+}

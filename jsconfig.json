@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+	"target": "es2016",
+	"module": "esnext",
+	"moduleResolution": "node",
+	"checkJs": true,
+	"allowJs": true,
+	"baseUrl": ".",
+	"paths": {
+	  "*": ["./*"]
+	},
+	"typeRoots": [
+	  "./node_modules/@types",
+	  "./config",
+	  "./controllers",
+	  "./middleware",
+	  "./models",
+	  "./repositories",
+	  "./services"
+	]
+  },
+  "include": [
+	"**/*.js",
+	"**/*.d.ts"
+  ],
+  "exclude": [
+	"node_modules",
+	"dist"
+  ]
+}
